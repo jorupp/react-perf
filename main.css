@@ -1,0 +1,248 @@
+.spinner {
+  position: relative;
+  height: 128px;
+  width: 128px;
+  float: left;
+  margin: 10px;
+  /* https://codepen.io/xgad/post/svg-radial-progress-meters */ }
+  .spinner .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .spinner .graph {
+    width: 128px;
+    height: 128px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    /* https://dockyard.com/blog/2018/10/24/how-to-use-css-variables-for-svg-gradients */ }
+    .spinner .graph .gradient-0 {
+      stop-color: red;
+      stop-opacity: 0.7; }
+    .spinner .graph .gradient-50 {
+      stop-color: yellow;
+      stop-opacity: 0.9; }
+    .spinner .graph .gradient-100 {
+      stop-color: green;
+      stop-opacity: 1; }
+    .spinner .graph circle {
+      cx: 64px;
+      cy: 64px;
+      r: 58px;
+      fill: none;
+      stroke-width: 12px;
+      stroke-dasharray: 364.42444px; }
+      .spinner .graph circle.circle1 {
+        -webkit-clip-path: polygon(-50% -50%, -50% 50%, 150% 50%, 150% -50%);
+                clip-path: polygon(-50% -50%, -50% 50%, 150% 50%, 150% -50%);
+        stroke: url("#gradient1"); }
+      .spinner .graph circle.circle2 {
+        -webkit-clip-path: polygon(-50% 150%, -50% 50%, 150% 50%, 150% 150%);
+                clip-path: polygon(-50% 150%, -50% 50%, 150% 50%, 150% 150%);
+        stroke: url("#gradient2"); }
+      .spinner .graph circle.fill-0 {
+        stroke-dashoffset: 364.42444px; }
+      .spinner .graph circle.fill-1 {
+        stroke-dashoffset: 360.7802px; }
+      .spinner .graph circle.fill-2 {
+        stroke-dashoffset: 357.13595px; }
+      .spinner .graph circle.fill-3 {
+        stroke-dashoffset: 353.49171px; }
+      .spinner .graph circle.fill-4 {
+        stroke-dashoffset: 349.84746px; }
+      .spinner .graph circle.fill-5 {
+        stroke-dashoffset: 346.20322px; }
+      .spinner .graph circle.fill-6 {
+        stroke-dashoffset: 342.55897px; }
+      .spinner .graph circle.fill-7 {
+        stroke-dashoffset: 338.91473px; }
+      .spinner .graph circle.fill-8 {
+        stroke-dashoffset: 335.27048px; }
+      .spinner .graph circle.fill-9 {
+        stroke-dashoffset: 331.62624px; }
+      .spinner .graph circle.fill-10 {
+        stroke-dashoffset: 327.982px; }
+      .spinner .graph circle.fill-11 {
+        stroke-dashoffset: 324.33775px; }
+      .spinner .graph circle.fill-12 {
+        stroke-dashoffset: 320.69351px; }
+      .spinner .graph circle.fill-13 {
+        stroke-dashoffset: 317.04926px; }
+      .spinner .graph circle.fill-14 {
+        stroke-dashoffset: 313.40502px; }
+      .spinner .graph circle.fill-15 {
+        stroke-dashoffset: 309.76077px; }
+      .spinner .graph circle.fill-16 {
+        stroke-dashoffset: 306.11653px; }
+      .spinner .graph circle.fill-17 {
+        stroke-dashoffset: 302.47229px; }
+      .spinner .graph circle.fill-18 {
+        stroke-dashoffset: 298.82804px; }
+      .spinner .graph circle.fill-19 {
+        stroke-dashoffset: 295.1838px; }
+      .spinner .graph circle.fill-20 {
+        stroke-dashoffset: 291.53955px; }
+      .spinner .graph circle.fill-21 {
+        stroke-dashoffset: 287.89531px; }
+      .spinner .graph circle.fill-22 {
+        stroke-dashoffset: 284.25106px; }
+      .spinner .graph circle.fill-23 {
+        stroke-dashoffset: 280.60682px; }
+      .spinner .graph circle.fill-24 {
+        stroke-dashoffset: 276.96257px; }
+      .spinner .graph circle.fill-25 {
+        stroke-dashoffset: 273.31833px; }
+      .spinner .graph circle.fill-26 {
+        stroke-dashoffset: 269.67409px; }
+      .spinner .graph circle.fill-27 {
+        stroke-dashoffset: 266.02984px; }
+      .spinner .graph circle.fill-28 {
+        stroke-dashoffset: 262.3856px; }
+      .spinner .graph circle.fill-29 {
+        stroke-dashoffset: 258.74135px; }
+      .spinner .graph circle.fill-30 {
+        stroke-dashoffset: 255.09711px; }
+      .spinner .graph circle.fill-31 {
+        stroke-dashoffset: 251.45286px; }
+      .spinner .graph circle.fill-32 {
+        stroke-dashoffset: 247.80862px; }
+      .spinner .graph circle.fill-33 {
+        stroke-dashoffset: 244.16437px; }
+      .spinner .graph circle.fill-34 {
+        stroke-dashoffset: 240.52013px; }
+      .spinner .graph circle.fill-35 {
+        stroke-dashoffset: 236.87589px; }
+      .spinner .graph circle.fill-36 {
+        stroke-dashoffset: 233.23164px; }
+      .spinner .graph circle.fill-37 {
+        stroke-dashoffset: 229.5874px; }
+      .spinner .graph circle.fill-38 {
+        stroke-dashoffset: 225.94315px; }
+      .spinner .graph circle.fill-39 {
+        stroke-dashoffset: 222.29891px; }
+      .spinner .graph circle.fill-40 {
+        stroke-dashoffset: 218.65466px; }
+      .spinner .graph circle.fill-41 {
+        stroke-dashoffset: 215.01042px; }
+      .spinner .graph circle.fill-42 {
+        stroke-dashoffset: 211.36618px; }
+      .spinner .graph circle.fill-43 {
+        stroke-dashoffset: 207.72193px; }
+      .spinner .graph circle.fill-44 {
+        stroke-dashoffset: 204.07769px; }
+      .spinner .graph circle.fill-45 {
+        stroke-dashoffset: 200.43344px; }
+      .spinner .graph circle.fill-46 {
+        stroke-dashoffset: 196.7892px; }
+      .spinner .graph circle.fill-47 {
+        stroke-dashoffset: 193.14495px; }
+      .spinner .graph circle.fill-48 {
+        stroke-dashoffset: 189.50071px; }
+      .spinner .graph circle.fill-49 {
+        stroke-dashoffset: 185.85646px; }
+      .spinner .graph circle.fill-50 {
+        stroke-dashoffset: 182.21222px; }
+      .spinner .graph circle.fill-51 {
+        stroke-dashoffset: 178.56798px; }
+      .spinner .graph circle.fill-52 {
+        stroke-dashoffset: 174.92373px; }
+      .spinner .graph circle.fill-53 {
+        stroke-dashoffset: 171.27949px; }
+      .spinner .graph circle.fill-54 {
+        stroke-dashoffset: 167.63524px; }
+      .spinner .graph circle.fill-55 {
+        stroke-dashoffset: 163.991px; }
+      .spinner .graph circle.fill-56 {
+        stroke-dashoffset: 160.34675px; }
+      .spinner .graph circle.fill-57 {
+        stroke-dashoffset: 156.70251px; }
+      .spinner .graph circle.fill-58 {
+        stroke-dashoffset: 153.05826px; }
+      .spinner .graph circle.fill-59 {
+        stroke-dashoffset: 149.41402px; }
+      .spinner .graph circle.fill-60 {
+        stroke-dashoffset: 145.76978px; }
+      .spinner .graph circle.fill-61 {
+        stroke-dashoffset: 142.12553px; }
+      .spinner .graph circle.fill-62 {
+        stroke-dashoffset: 138.48129px; }
+      .spinner .graph circle.fill-63 {
+        stroke-dashoffset: 134.83704px; }
+      .spinner .graph circle.fill-64 {
+        stroke-dashoffset: 131.1928px; }
+      .spinner .graph circle.fill-65 {
+        stroke-dashoffset: 127.54855px; }
+      .spinner .graph circle.fill-66 {
+        stroke-dashoffset: 123.90431px; }
+      .spinner .graph circle.fill-67 {
+        stroke-dashoffset: 120.26007px; }
+      .spinner .graph circle.fill-68 {
+        stroke-dashoffset: 116.61582px; }
+      .spinner .graph circle.fill-69 {
+        stroke-dashoffset: 112.97158px; }
+      .spinner .graph circle.fill-70 {
+        stroke-dashoffset: 109.32733px; }
+      .spinner .graph circle.fill-71 {
+        stroke-dashoffset: 105.68309px; }
+      .spinner .graph circle.fill-72 {
+        stroke-dashoffset: 102.03884px; }
+      .spinner .graph circle.fill-73 {
+        stroke-dashoffset: 98.3946px; }
+      .spinner .graph circle.fill-74 {
+        stroke-dashoffset: 94.75035px; }
+      .spinner .graph circle.fill-75 {
+        stroke-dashoffset: 91.10611px; }
+      .spinner .graph circle.fill-76 {
+        stroke-dashoffset: 87.46187px; }
+      .spinner .graph circle.fill-77 {
+        stroke-dashoffset: 83.81762px; }
+      .spinner .graph circle.fill-78 {
+        stroke-dashoffset: 80.17338px; }
+      .spinner .graph circle.fill-79 {
+        stroke-dashoffset: 76.52913px; }
+      .spinner .graph circle.fill-80 {
+        stroke-dashoffset: 72.88489px; }
+      .spinner .graph circle.fill-81 {
+        stroke-dashoffset: 69.24064px; }
+      .spinner .graph circle.fill-82 {
+        stroke-dashoffset: 65.5964px; }
+      .spinner .graph circle.fill-83 {
+        stroke-dashoffset: 61.95215px; }
+      .spinner .graph circle.fill-84 {
+        stroke-dashoffset: 58.30791px; }
+      .spinner .graph circle.fill-85 {
+        stroke-dashoffset: 54.66367px; }
+      .spinner .graph circle.fill-86 {
+        stroke-dashoffset: 51.01942px; }
+      .spinner .graph circle.fill-87 {
+        stroke-dashoffset: 47.37518px; }
+      .spinner .graph circle.fill-88 {
+        stroke-dashoffset: 43.73093px; }
+      .spinner .graph circle.fill-89 {
+        stroke-dashoffset: 40.08669px; }
+      .spinner .graph circle.fill-90 {
+        stroke-dashoffset: 36.44244px; }
+      .spinner .graph circle.fill-91 {
+        stroke-dashoffset: 32.7982px; }
+      .spinner .graph circle.fill-92 {
+        stroke-dashoffset: 29.15396px; }
+      .spinner .graph circle.fill-93 {
+        stroke-dashoffset: 25.50971px; }
+      .spinner .graph circle.fill-94 {
+        stroke-dashoffset: 21.86547px; }
+      .spinner .graph circle.fill-95 {
+        stroke-dashoffset: 18.22122px; }
+      .spinner .graph circle.fill-96 {
+        stroke-dashoffset: 14.57698px; }
+      .spinner .graph circle.fill-97 {
+        stroke-dashoffset: 10.93273px; }
+      .spinner .graph circle.fill-98 {
+        stroke-dashoffset: 7.28849px; }
+      .spinner .graph circle.fill-99 {
+        stroke-dashoffset: 3.64424px; }
+      .spinner .graph circle.fill-100 {
+        stroke-dashoffset: 0px; }
+
+
+/*# sourceMappingURL=main.css.map*/
