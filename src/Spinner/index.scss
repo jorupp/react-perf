@@ -1,6 +1,74 @@
 .spinner {
-    .number {
+    $size: 128px;
+    $stroke-width: 12px;
 
+    position: relative;
+    height: $size;
+    width: $size;
+    float: left;
+    margin: 10px;
+
+    .number {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    
+
+    /* https://codepen.io/xgad/post/svg-radial-progress-meters */
+    .graph {
+        width: $size;
+        height: $size;
+        transform: rotate(-90deg);
+
+        $color-start: red;
+        $color-midpoint: yellow;
+        $color-end: green;
+
+        #gradient1 {
+            stop {
+                stop-color: $color-end;
+            }
+            stop:first-child {
+                stop-color: $color-midpoint;
+            }
+        }
+        #gradient2 {
+            stop {
+                stop-color: $color-start;
+            }
+            stop:first-child {
+                stop-color: $color-midpoint;
+            }
+        }
+
+        circle {
+            $r: ($size/2) - ($stroke-width/2);
+            cx: $size/2;
+            cy: $size/2;
+            r: $r;
+            fill: none;
+            stroke-width: $stroke-width;
+
+            $fullPct: 2 * 3.14159 * $r;
+            $onePct: $fullPct / 100;
+            stroke-dasharray: $fullPct;
+
+            &.circle1 {
+                clip-path: polygon(-50% -50%, -50% 50%, 150% 50%, 150% -50%);
+                stroke: url('#gradient1');
+            }
+            &.circle2 {
+                clip-path: polygon(-50% 150%, -50% 50%, 150% 50%, 150% 150%);
+                // clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+                stroke: url('#gradient2');
+            }
+
+            @for $i from 0 through 100 {
+                &.fill-#{$i} {
+                    stroke-dashoffset: $onePct * (100 - $i);
+                }
+            }
+        }
+    }
 }

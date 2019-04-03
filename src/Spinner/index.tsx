@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './index.scss';
+
 export interface SpinnerProps {
     startNumber: number;
     endNumber: number;
@@ -36,6 +38,19 @@ export default class Spinner extends React.Component<SpinnerProps, SpinnerState>
         return (
             <div className="spinner">
                 <div className="number">{number}</div>
+                <svg className="graph">
+                    <linearGradient id="gradient1">
+                        <stop offset="0%"></stop>
+                        <stop offset="100%"></stop>
+                    </linearGradient>
+                    <linearGradient id="gradient2">
+                        <stop offset="0%"></stop>
+                        <stop offset="100%"></stop>
+                    </linearGradient>
+
+                    <circle className={"circle1 fill-" + this.state.currentNumber.toFixed(0) }/>
+                    <circle className={"circle2 fill-" + this.state.currentNumber.toFixed(0) }/>
+                </svg>
             </div>
         );
     }
