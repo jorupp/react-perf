@@ -7,6 +7,7 @@ import { withKnobs, number, text } from '@storybook/addon-knobs';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import Spinner from '../src/Spinner';
+import LoggingWrapper from '../src/LoggingWrapper';
 
 storiesOf('Spinner', module)
   .addDecorator(withKnobs)
@@ -26,5 +27,5 @@ storiesOf('Spinner', module)
       key,
     };
 
-    return <Spinner {...props}/>;
+    return <LoggingWrapper><Spinner {...props}/></LoggingWrapper>;
   });
