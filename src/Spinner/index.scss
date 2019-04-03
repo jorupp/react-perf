@@ -21,25 +21,18 @@
         height: $size;
         transform: rotate(-90deg);
 
-        $color-start: red;
-        $color-midpoint: yellow;
-        $color-end: green;
-
-        #gradient1 {
-            stop {
-                stop-color: $color-end;
-            }
-            stop:first-child {
-                stop-color: $color-midpoint;
-            }
+        /* https://dockyard.com/blog/2018/10/24/how-to-use-css-variables-for-svg-gradients */
+        .gradient-0 {
+            stop-color: red;
+            stop-opacity: 0.7;
         }
-        #gradient2 {
-            stop {
-                stop-color: $color-start;
-            }
-            stop:first-child {
-                stop-color: $color-midpoint;
-            }
+        .gradient-50 {
+            stop-color: yellow;
+            stop-opacity: 0.9;
+        }
+        .gradient-100 {
+            stop-color: green;
+            stop-opacity: 1;
         }
 
         circle {
@@ -60,10 +53,10 @@
             }
             &.circle2 {
                 clip-path: polygon(-50% 150%, -50% 50%, 150% 50%, 150% 150%);
-                // clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
                 stroke: url('#gradient2');
             }
 
+            // 100 increments should be precise enough
             @for $i from 0 through 100 {
                 &.fill-#{$i} {
                     stroke-dashoffset: $onePct * (100 - $i);

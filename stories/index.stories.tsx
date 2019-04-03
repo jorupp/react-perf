@@ -12,6 +12,7 @@ storiesOf('Spinner', module)
     const startNumber = number('Start value', 0);
     const endNumber = number('End value', 90.3);
     const increment = number('Increment', 1.5);
+    const fullNumber = number('100%', 100);
     const precision = number('Precision', 1);
     const speed = number('Speed', 0);
     const key = text('Key', 'x');
@@ -19,6 +20,7 @@ storiesOf('Spinner', module)
       startNumber,
       endNumber,
       increment,
+      fullNumber,
       precision,
       speed,
       key,
@@ -29,6 +31,7 @@ storiesOf('Spinner', module)
   .add('Multiple Spinners', () => {
     const startNumber = number('Start value', 0);
     const increment = number('Increment', 1.5);
+    const fullNumber = number('100%', 100);
     const precision = number('Precision', 1);
     const speed = number('Speed', 0);
     const key = text('Key', 'x');
@@ -45,6 +48,7 @@ storiesOf('Spinner', module)
     const props = {
       startNumber,
       increment,
+      fullNumber,
       precision,
       speed,
     };

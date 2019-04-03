@@ -5,6 +5,7 @@ import './index.scss';
 export interface SpinnerProps {
     startNumber: number;
     endNumber: number;
+    fullNumber?: number;
     increment: number;
     speed: number;
     precision?: number;
@@ -35,21 +36,22 @@ export default class Spinner extends React.Component<SpinnerProps, SpinnerState>
 
     public render() {
         const number = this.props.precision === undefined ? this.state.currentNumber : this.state.currentNumber.toFixed(this.props.precision);
+        const pct = Math.ceil(this.state.currentNumber / (this.props.fullNumber || 100) * 100);
         return (
             <div className="spinner">
                 <div className="number">{number}</div>
                 <svg className="graph">
                     <linearGradient id="gradient1">
-                        <stop offset="0%"></stop>
-                        <stop offset="100%"></stop>
+                        <stop offset="0%" className="gradient-50"></stop>
+                        <stop offset="100%" className="gradient-100"></stop>
                     </linearGradient>
                     <linearGradient id="gradient2">
-                        <stop offset="0%"></stop>
-                        <stop offset="100%"></stop>
+                        <stop offset="0%" className="gradient-50"></stop>
+                        <stop offset="100%" className="gradient-0"></stop>
                     </linearGradient>
 
-                    <circle className={"circle1 fill-" + this.state.currentNumber.toFixed(0) }/>
-                    <circle className={"circle2 fill-" + this.state.currentNumber.toFixed(0) }/>
+                    <circle className={"circle1 fill-" + pct }/>
+                    <circle className={"circle2 fill-" + pct }/>
                 </svg>
             </div>
         );
