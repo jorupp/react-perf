@@ -1,3 +1,7 @@
+# React-perf
+
+A quick proof-of-concept about how fast React can render state updates.  Storybook published to https://jorupp.github.io/react-perf/.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

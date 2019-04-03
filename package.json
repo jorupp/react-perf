@@ -13,6 +13,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
+    "deploy-storybook": "storybook-to-ghpages",
     "build-storybook": "build-storybook"
   },
   "eslintConfig": {
@@ -31,6 +32,7 @@
     "@storybook/addon-links": "^5.0.6",
     "@storybook/addons": "^5.0.6",
     "@storybook/react": "^5.0.6",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@types/storybook__addon-knobs": "^4.0.5",
     "@types/storybook__react": "^4.0.1",
     "babel-loader": "^8.0.5"
