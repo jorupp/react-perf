@@ -1,11 +1,8 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
 import { withKnobs, number, text } from '@storybook/addon-knobs';
 
-import { Button, Welcome } from '@storybook/react/demo';
 import Spinner from '../src/Spinner';
 import LoggingWrapper from '../src/LoggingWrapper';
 
